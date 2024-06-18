@@ -43,10 +43,24 @@
             border-radius: 50%;
             margin-bottom: 20px;
         }
+        .publication-card {
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #f8f9fa;
+        }
+        .publication-card h5 {
+            margin: 0;
+        }
+        .publication-card .btn-group {
+            margin-top: 10px;
+        }
+        .publication-note {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
     </style>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -133,31 +147,31 @@
                     <div class="project">
                         <div class="project-title" data-target="#project1">Human Robot Collaboration</div>
                         <div id="project1" class="project-details">
-                            Developed an innovative framework for predicting human hand motion in shared workspaces with robots.
+                            Developed an innovative framework for predicting human hand motion in shared workspaces with robots, enhancing safety and efficiency in human-robot collaboration. Created a custom dataset of human hand trajectories by simulating intentional collisions between humans and robots. Utilized 3D cell quantization for sensitive hand position data and integrated advanced machine learning models (vector embedding) to improve motion prediction accuracy. Leveraged ANNOY for efficient nearest neighbor search, ensuring real-time performance with high precision. Published a paper demonstrating the framework's superior predictive capabilities over baseline models.
                         </div>
                     </div>
                     <div class="project">
                         <div class="project-title" data-target="#project2">Object Detection in 3-D LiDAR</div>
                         <div id="project2" class="project-details">
-                            Developed an efficient and lightweight 3D LiDAR object detection framework, 3D-PSH.
+                            Developed an efficient and lightweight 3D LiDAR object detection framework, 3D-PSH, combining adaptive clustering with 3D Point Spatial Histograms (3D-PSH) and classical classification techniques. The framework segments point cloud data into clusters, computes 3D-PSH, and uses a Bag of Visual Words (BoVW) approach for compact representation. This method, tested on the KITTI dataset and live sensor data, balances computational efficiency with high detection accuracy, making it suitable for real-time applications on devices with limited hardware capabilities. Published a paper demonstrating its competitive accuracy and reduced computational requirements compared to traditional methods.
                         </div>
                     </div>
                     <div class="project">
                         <div class="project-title" data-target="#project3">Roman Spectroscopic Analysis</div>
                         <div id="project3" class="project-details">
-                            Developed deep learning models for predicting biomedical classes based on Raman spectroscopic data.
+                            Developed deep learning models for predicting biomedical classes based on Raman spectroscopic data. The models were trained on datasets with class labels derived from control Nucleus, MV Data, and SARS Nucleus. This approach facilitated accurate classification and analysis of biomedical samples, demonstrating the potential of deep learning in enhancing spectroscopic data interpretation for biomedical applications.
                         </div>
                     </div>
                     <div class="project">
                         <div class="project-title" data-target="#project4">Rhetorical Strategies in Crowdfunding</div>
                         <div id="project4" class="project-details">
-                            Developed and utilized large language models (LLMs) to classify rhetorical strategies in crowdfunding project submissions.
+                            Developed and utilized large language models (LLMs) to classify rhetorical strategies in crowdfunding project submissions. This project involved analyzing the correlation between various LLM models and ground truth data to evaluate their effectiveness in identifying persuasive elements that influence funding success. The insights gained from this research contribute to understanding how different rhetorical techniques impact the outcomes of crowdfunding campaigns.
                         </div>
                     </div>
                     <div class="project">
                         <div class="project-title" data-target="#project5">Social Media Data Analysis</div>
                         <div id="project5" class="project-details">
-                            Focused on the automatic sentiment analysis of public opinion towards government and official tweets.
+                            This project focused on the automatic sentiment analysis of public opinion towards government and official tweets, which proved to be particularly valuable during the COVID-19 era. One of the primary challenges was dealing with the multilingual nature of the content, which included English, Urdu, and Roman Urdu. Since Urdu and Roman Urdu are low-resource languages, we addressed this by creating a novel benchmark dataset and training a specialized Roman Urdu classifier. Ultimately, we developed a comprehensive approach to effectively handle the multilinguality of tweets and social media posts, providing accurate sentiment analysis across languages.
                         </div>
                     </div>
                 </div>
@@ -169,8 +183,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="section-title">Research Publications</h2>
-<p>Selected publications only. Complete list available on <a href="https://scholar.google.co.th/citations?hl=en&user=rggPjyoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>.</p>
-
+                    <p class="publication-note">Selected publications only. Complete list available on <a href="https://scholar.google.co.th/citations?hl=en&user=rggPjyoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>.</p>
                     <div class="form-group">
                         <label for="yearSelect">Select Year:</label>
                         <select class="form-control" id="yearSelect">
@@ -181,124 +194,256 @@
                             <option value="2021">2021</option>
                             <option value="2020">2020</option>
                             <option value="2019">2019</option>
-                            <option value="2018">2018</option>
-                            <option value="2017">2017</option>
-                            <option value="2016">2016</option>
-                            <option value="2015">2015</option>
-                            <option value="2014">2014</option>
-                            <option value="2013">2013</option>
-                            <option value="2012">2012</option>
-                            <option value="2011">2011</option>
+                            
                         </select>
                     </div>
                     <div id="publicationsList">
-                        <div class="publication 2024"><p>Hussain, Shumaila and Nadeem, Muhammad and Baber, Junaid and Hamdi, Mohammed and Rajab, Adel and Al Reshan, Mana Saleh and Shaikh, Asadullah (2024). Vulnerability detection in Java source code using a quantum convolutional neural network with self-attentive pooling, deep sequence, and graph-based hybrid feature extraction. In <i>Scientific Reports</i>, 14(1), 7406.</p></div>
-
-<div class="publication 2023"><p>Aadil, Farhan and Song, Oh-young and Mushtaq, Mahreen and Maqsood, Muazzam and Ejaz Sheikh, Sadia and Baber, Junaid (2023). An efficient cluster optimization framework for internet of things (IoT) based Wireless Body Area Networks. In <i>Journal of Enterprise Information Management</i>, 36(3), 839--860.</p></div>
-
-<div class="publication 2023"><p>Gómez, Juan and Aycard, Olivier and Baber, Junaid (2023). Efficient Detection and Tracking of Human Using 3D LiDAR Sensor. In <i>Sensors</i>, 23(10), 4720.</p></div>
-
-<div class="publication 2023"><p>Nawaz, Ali Nawaz Ali and Nawaz, Muhammad and Shaikh, Noor Ahmed and Rajper, Samina and Baber, Junaid and Khalid, Muhammad (2023). TPTS: Text Pre-processing Techniques for Sindhi Language: Text Pre-processing Techniques. In <i>Pakistan Journal of Emerging Science and Technologies (PJEST)</i>, 4(3).</p></div>
-
-<div class="publication 2023"><p>Ahmad, Bilal and Babar, Junaid and Bakhtyar, Maheen and Ullah, Ihsan (2023). GENDER BASED MONITORING OF SOP’s DURING COVID-19 USING MACHINE LEARNING. In <i>Journal of Applied and Emerging Sciences</i>, 13(1), 56--60.</p></div>
-
-<div class="publication 2023"><p>Kumer, Akshay and Babar, Junaid and Khalid, Muhamamd and Mujtaba, Sadia (2023). Enhanced Facial Expression Recognition via Deep Transfer Learning and Augmentation. In <i>LC International Journal of STEM (ISSN: 2708-7123)</i>, 4(4), 1--9.</p></div>
-
-<div class="publication 2023"><p>Shah, Jahangeer and Babar, Junaid and Al Rasheed, Haroon and Khalid, Muhammad (2023). Predicting COVID-19 Trends with Comparative Analysis of ARIMA and ANN Models. In <i>Pakistan Journal of Emerging Science and Technologies (PJEST)</i>, 4(4).</p></div>
-
-<div class="publication 2022"><p>Ali, Muhammad and Asghar, Rizwan and Ullah, Ihsan and Ahmed, Atiq and Noor, Waheed and Baber, Junaid (2022). Towards intelligent P2P IPTV overlay management through classification of peers. In <i>Peer-to-Peer Networking and Applications</i>, 15(1), 827--838.</p></div>
-
-<div class="publication 2022"><p>Bilal Chandio, Asadullah Shaikh, Maheen Bakhtyar, Mesfer Alrizq, Junaid Baber, Adel Sulaiman, Adel Rajab, Waheed Noor (2022). Sentiment Analysis of Roman Urdu on E-Commerce Reviews Using Machine Learning. In <i>CMES-Computer Modeling in Engineering & Sciences</i>.</p></div>
-
-<div class="publication 2022"><p>Sabir, Imran and Baber, Junaid and Ahmed, Atiq and Sheikh, Naveed and Bakhtyar, Maheen and Khan, Azam and Devi, Varsha (2022). Deep transferable learning on heartbeat classification for imbalance dataset. In <i>Journal of Intelligent & Fuzzy Systems</i>, 43(2), 2057--2067.</p></div>
-
-<div class="publication 2022"><p>Sanjrani, Anwar Ali and Baber, Junaid and Bakhtyar, Maheen and Ullah, Ihsan and Naveed, M Shumail and Noor, Waheed and Basit, Abdul and Khan, Azam and Sheikh, Naveed (2022). Extended framework for Sindhi numerals OCR using gradient orientation histograms. In <i>Journal of Intelligent & Fuzzy Systems</i>, 43(2), 2045--2056.</p></div>
-
-<div class="publication 2022"><p>Butt, Sahrish and Bakhtyar, Maheen and Noor, Waheed and Baber, Junaid and Ullah, Ihsan and Ahmed, Atiq and Basit, Abdul and Kakar, M Saeed H (2022). Semantic similarity based food entities recognition using WordNet. In <i>Journal of Intelligent & Fuzzy Systems</i>, 43(2), 2069--2078.</p></div>
-
-<div class="publication 2022"><p>Chandio, Bilal Ahmed and Imran, Ali Shariq and Bakhtyar, Maheen and Daudpota, Sher Muhammad and Baber, Junaid (2022). Attention-based RU-BiLSTM sentiment analysis model for roman Urdu. In <i>Applied Sciences</i>, 12(7), 3641.</p></div>
-
-<div class="publication 2022"><p>Abbas, M Zain and Baber, Junaid and Bakhtyar, Maheen and Khan, Azam and Saeed, Adnan (2022). Cloud-based face recognition for low resource clients. In <i>Security and Privacy Trends in Cloud Computing and Big Data</i>, 73--84.</p></div>
-
-<div class="publication 2022"><p>Fakhar, Shariqa and Baber, Junaid and Bazai, Sibghat Ullah and Marjan, Shah and Jasinski, Michal and Jasinska, Elzbieta and Chaudhry, Muhammad Umar and Leonowicz, Zbigniew and Hussain, Shumaila (2022). Smart classroom monitoring using novel real-time facial expression recognition system. In <i>Applied Sciences</i>, 12(23), 12134.</p></div>
-
-<div class="publication 2022"><p>Zheng, Pu and Wieber, Pierre-Brice and Baber, Junaid and Aycard, Olivier (2022). Human arm motion prediction for collision avoidance in a shared workspace. In <i>Sensors</i>, 22(18), 6951.</p></div>
-
-<div class="publication 2022"><p>Abbas, Muhammad Zain and Baber, Junaid and Bakhtyar, Maheen and Noor, Waheed and others (2022). Evaluation of Face Detectors for Face Recognition. In <i>Pakistan Journal of Emerging Science and Technologies (PJEST)</i>, 3(2), 1--10.</p></div>
-
-<div class="publication 2021"><p>Iqbal, Arif and Basit, Abdul and Ali, Imran and Babar, Junaid and Ullah, Ihsan (2021). Automated Meter Reading Detection Using Inception with Single Shot Multi-Box Detector. In <i>Intelligent Automation & Soft Computing</i>, 27(2).</p></div>
-
-<div class="publication 2021"><p>Ahmed, Shakil and Shaikh, Asadullah and Alshahrani, Hani and Alghamdi, Abdullah and Alrizq, Mesfer and Baber, Junaid and Bakhtyar, Maheen (2021). Transfer learning approach for classification of histopathology whole slide images. In <i>Sensors</i>, 21(16), 5361.</p></div>
-
-<div class="publication 2021"><p>Mohammad, Nazar and Baber, Junaid and Bakhtyar, Maheen and Chandio, Bilal Ahmed and Sanjrani, Anwar Ali (2021). Compact Binary Fingerprint for Image Copy Re-Ranking. In <i>arXiv preprint arXiv:2109.07802</i>.</p></div>
-
-<div class="publication 2021"><p>Noor, Ansa Abdul and Bakhtyar, Maheen and Chandio, Bilal Ahmed and Gull, Rehana and Baber, Junaid (2021). Automatic cv ranking using document vector and word embedding. In <i>Pakistan Journal of Emerging Science and Technologies</i>, 2, 1--9.</p></div>
-
-<div class="publication 2021"><p>Majeed, Kousar Abdul and Abbas, Zain and Bakhtyar, Maheen and Durrani, Zohaib and Baber, Junaid and Ullah, Ihsan (2021). Face Detectors Evaluation to Select the Fastest among DLIB, HAAR Cascade, and MTCNN. In <i>Pakistan Journal of Emerging Science and Technologies</i>, 2, 1--13.</p></div>
-
-<div class="publication 2021"><p>Gul, Ali and Noor, Waheed and Babar, Junaid and Nawaz, Ali and Athar, Syed Owais (2021). Learning Predictive Models for Underground Coal Mine Environment Using Sensor Data. In <i>2021 International Conference on Computing, Electronic and Electrical Engineering (ICE Cube)</i>, 1--6.</p></div>
-
-<div class="publication 2020"><p>Baber, Junaid and Bakhtyar, Maheen and Uddin Ahmed, Kafil and Noor, Waheed and Devi, Varsha and Sammad, Abdul (2020). Facial expression recognition and analysis of interclass false positives using CNN. In <i>Advances in Information and Communication: Proceedings of the 2019 Future of Information and Communication Conference (FICC), Volume 2</i>, 46--54.</p></div>
-
-<div class="publication 2020"><p>Zahid, Laiba and Maqsood, Muazzam and Durrani, Mehr Yahya and Bakhtyar, Maheen and Baber, Junaid and Jamal, Habibullah and Mehmood, Irfan and Song, Oh-Young (2020). A spectrogram-based deep feature assisted computer-aided diagnostic system for Parkinson’s disease. In <i>IEEE Access</i>, 8, 35482--35495.</p></div>
-
-<div class="publication 2020"><p>Jan, Ali and Baber, Junaid and Sanjrani, Anwar Ali and Bakhtyar, Maheen (2020). Urdu handwritten character recognition using deep learning. In <i>Journal of Information Communication Technologies and Robotic Applications</i>, 42--51.</p></div>
-
-<div class="publication 2020"><p>Khalid, Muhammad and Baber, Junaid and Kasi, Mumraiz Khan and Bakhtyar, Maheen and Devi, Varsha and Sheikh, Naveed (2020). Empirical evaluation of activation functions in deep convolution neural network for facial expression recognition. In <i>2020 43rd International conference on telecommunications and signal processing (TSP)</i>, 204--207.</p></div>
-
-<div class="publication 2020"><p>Ashraf, Rehan and Afzal, Sitara and Rehman, Attiq Ur and Gul, Sarah and Baber, Junaid and Bakhtyar, Maheen and Mehmood, Irfan and Song, Oh-Young and Maqsood, Muazzam (2020). Region-of-interest based transfer learning assisted framework for skin cancer detection. In <i>IEEE Access</i>, 8, 147858--147871.</p></div>
-
-<div class="publication 2020"><p>Ali, Muhammad and Ullah, Ihsan and Noor, Waheed and Sajid, Ahthasham and Basit, Abdul and Baber, Junaid (2020). Predicting the session of an P2P IPTV user through support vector regression (SVR). In <i>Engineering, Technology & Applied Science Research</i>, 10(4), 6021--6026.</p></div>
-
-<div class="publication 2020"><p>Nawaz, Ali and Bakhtyar, Maheen and Baber, Junaid and Ullah, Ihsan and Noor, Waheed and Basit, Abdul (2020). Extractive text summarization models for Urdu language. In <i>Information Processing & Management</i>, 57(6), 102383.</p></div>
-
-<div class="publication 2020"><p>Nasir, Muhammad and Bakhtyar, Maheen and Babar, Junaid and Lakho, Sadia and Ahmed, Bilal and Noor, Waheed (2020). BIOPAK Flasher: Epidemic disease monitoring and detection in Pakistan using text mining. In <i>International Workshop Soft Computing Applications</i>, 519--536.</p></div>
-
-<div class="publication 2020"><p>Aimal, Mohammad and Bakhtyar, Maheen and Baber, Junaid and Lakho, Sadia and Mohammad, Umar and Ahmed, Warda and Karim, Jahanvash (2020). Identifying negativity factors from social media text corpus using sentiment analysis method. In <i>International Workshop Soft Computing Applications</i>, 508--518.</p></div>
-
-<div class="publication 2019"><p>Daudpota, Sher Muhammad and Muhammad, Atta and Baber, Junaid (2019). Video genre identification using clustering-based shot detection algorithm. In <i>Signal, Image and Video Processing</i>, 13(7), 1413--1420.</p></div>
-
-                        <div class="publication 2019"><p>Benish Anwar, Junaid Baber, Atiq Ahmed, Maheen Bakhtyar, Sher Muhammad Daudpota, Anwar Ali Sanjrani, Ihsan Ullah (2019). Image Retrieval using Visual Phrases. In <i>International Journal of Advanced Computer Science and Applications</i>, 10(3).</p></div>
-
-                        <div class="publication 2019"><p>Noor, Faiza and Bakhtyar, Maheen and Baber, Junaid (2019). Sentiment analysis in e-commerce using svm on roman urdu text. In <i>Emerging Technologies in Computing: Second International Conference, iCETiC 2019, London, UK, August 19--20, 2019, Proceedings 2</i>, 213--222.</p></div>
-
-                        <div class="publication 2019"><p>Sindhu, Irum and Daudpota, Sher Muhammad and Badar, Kamal and Bakhtyar, Maheen and Baber, Junaid and Nurunnabi, Mohammad (2019). Aspect-based opinion mining on student’s feedback for faculty teaching performance evaluation. In <i>IEEE Access</i>, 7, 108729--108741.</p></div>
-
-                        <div class="publication 2019"><p>Rashid, Muhammad and Sheikh, Naveed and Raza, Arbab and Raziq, Abdul and Rehman, Abdul and Baber, Junaid and Basit, Abdul (2019). Development of Dynamic Modeling and Fuzzy Logic System by Classical and Modern Strategies for the Control of Quadcopter. In <i>American Scientific Research Journal for Engineering, Technology, and Sciences (ASRJETS)</i>, 62(1), 108--114.</p></div>
-
-                        <div class="publication 2019"><p>Khan, Toorab and Noor, Waheed and Babar, Junaid and Bakhtyar, Maheen (2019). Winning the Polio War in Pakistan. In <i>International Journal of Advanced Computer Science and Applications</i>, 10(12).</p></div>
-
-                        <div class="publication 2018"><p>Younas, Farkhunda and Baber, Junaid and Mahmood, Tahir and Farooq, Javeria and Bakhtyar, Maheen (2018). Bag of features vs vector of locally aggregated descriptors. In <i>Proceedings of SAI Intelligent Systems Conference (IntelliSys) 2016: Volume 2</i>, 119--128.</p></div>
-
-                        <div class="publication 2018"><p>Haroon, Muhammad and Baber, Junaid and Ullah, Ihsan and Daudpota, Sher Muhammad and Bakhtyar, Maheen and Devi, Varsha (2018). Video scene detection using compact bag of visual word models. In <i>Advances in Multimedia</i>, 2018(1), 2564963.</p></div>
-
-                        <div class="publication 2018"><p>Saeed, Saeeda and Baber, Junaid and Bakhtyar, Maheen and Ullah, Ihsan and Sheikh, Naveed and Dad, Imam and Sanjrani, Anwar Ali (2018). Empirical evaluation of svm for facial expression recognition. In <i>International Journal of Advanced Computer Science and Applications</i>, 9(11).</p></div>
-
-                        <div class="publication 2018"><p>Kakar, Azizullah and Sheikh, Naveed and Ahmed, Bilal and Iqbal, Saleem and Rahman, Abdul and Kakar, Saboor Ahmad and Raza, Arbab and Naz, Samina and Babar, Junaid (2018). Systematic analysis and classification of cardiac rate variability using artificial neural network. In <i>International Journal of Advanced Computer Science and Application</i>, 9(11), 746--750.</p></div>
-
-                        <div class="publication 2018"><p>Haroon, Muhammad and Baber, Junaid and Ullah, Ihsan and Daudpota, Sher Muhammad and Bakhtyar, Maheen and Devi, Varsha (2018). Research Article Video Scene Detection Using Compact Bag of Visual Word Models. In <i>Advances in Multimedia</i>, 2018.</p></div>
-
-                        <div class="publication 2017"><p>Baber, Junaid and Bakhtyar, Maheen and Ullah, Ihsan and Rehman, Mariam and Khalid, Muhammad (2017). Effective compression of center symmetric local Binary Pattern. In <i>Mehran University Research Journal of Engineering & Technology</i>, 36(2), 209--224.</p></div>
-
-                        <div class="publication 2017"><p>Sachdeva, Varsha Devi and Baber, Junaid and Bakhtyar, Maheen and Ullah, Ihsan and Noor, Waheed and Basit, Abdul (2017). Performance evaluation of SIFT and Convolutional Neural Network for image retrieval. In <i>International Journal of Advanced Computer Science and Applications</i>, 8(12).</p></div>
-
-                        <div class="publication 2017"><p>Sachdeva, Varsha Devi and Fida, Erum and Baber, Junaid and Bakhtyar, Maheen and Dad, Imam and Atif, Muhammad (2017). Better object recognition using bag of visual word model with compact vocabulary. In <i>2017 13th International Conference on Emerging Technologies (ICET)</i>, 1--4.</p></div>
-
-                        <div class="publication 2011"><p>Baber, Junaid and Afzulpurkar, Nitin and Dailey, Matthew N and Bakhtyar, Maheen (2011). Shot boundary detection from videos using entropy and local descriptor. In <i>2011 17th International conference on digital signal processing (DSP)</i>, 1--6.</p></div>
-                        <div class="publication 2011"><p>Baber, Junaid and Afzulpurkar, Nitin and Bakhtyar, Maheen (2011). Video segmentation into scenes using entropy and SURF. In <i>2011 7th International Conference on Emerging Technologies</i>, 1--6.</p></div>
-                        <div class="publication 2012"><p>Doudpota, Sher Muhammad and Guha, Sumanta and Baber, Junaid (2012). Shot-based genre identification in musicals. In <i>Wireless Networks and Computational Intelligence: 6th International Conference on Information Processing, ICIP 2012, Bangalore, India, August 10-12, 2012. Proceedings</i>, 129--138.</p></div>
-                        <div class="publication 2012"><p>Bakhtyar, Maheen and Kawtrakul, Asanee and Baber, Junaid and Doudpota, Sher Muhammad (2012). Creating missing classes automatically to improve question classification in question answering systems. In <i>Seventh International Conference on Digital Information Management (ICDIM 2012)</i>, 99--103.</p></div>
-                        <div class="publication 2012"><p>Baber, Junaid and Satoh, Shin’ichi and Afzulpurkar, Nitin and Bakhtyar, Maheen (2012). Q-CSLBP: compression of CSLBP descriptor. In <i>Advances in Multimedia Information Processing--PCM 2012: 13th Pacific-Rim Conference on Multimedia, Singapore, December 4-6, 2012. Proceedings 13</i>, 513--521.</p></div>
-                        <div class="publication 2013"><p>Doudpota, Sher Muhammad and Guha, Sumanta and Baber, Junaid (2013). Mining movies for song sequences with video based music genre identification system. <i>Information processing \\& management</i>, <b>49</b>(2), 529--544.</p></div>
-                        <div class="publication 2013"><p>Baber, Junaid and Afzulpurkar, Nitin and Satoh, Shin'ichi (2013). A framework for video segmentation using global and local features. <i>International Journal of Pattern Recognition and Artificial Intelligence</i>, <b>27</b>(03), 1356002.</p></div>
-                        <div class="publication 2014"><p>Baber, Junaid and Dailey, Matthew N and Satoh, Shin'ichi and Afzulpurkar, Nitin and Bakhtyar, Maheen (2014). BIG-OH: BInarization of gradient orientation histograms. <i>Image and Vision Computing</i>, <b>32</b>(11), 940--953.</p></div>
-                        <div class="publication 2013"><p>Baber, Junaid (2013). Improving the Performance of Local Keypoint Descriptors for Image and Video Applications.</p></div>
-                        <div class="publication 2013"><p>Keatmanee, Chadaporn and Baber, Junaid and Bakhtyar, Maheen (2013). Simple example of applying extended kalman filter. In <i>1st International Electrical Engineering Congress</i>.</p></div>
-                        <div class="publication 2015"><p>Baber, Junaid and Fida, Erum and Bakhtyar, Maheen and Ashraf, Humaira (2015). Making patch based descriptors more distinguishable and robust for image copy retrieval. In <i>2015 International Conference on Digital Image Computing: Techniques and Applications (DICTA)</i>, 1--8.</p></div>
-                        <div class="publication 2015"><p>Fida, Erum and Baber, Junaid and Bakhtyar, Maheen and Iqbal, Muhammad Javid (2015). Automatic image segmentation based on maximal similarity based region merging. In <i>2015 International Conference on Digital Image Computing: Techniques and Applications (DICTA)</i>, 1--8.</p></div>
-                        <div class="publication 2016"><p>Baber, Junaid and Bakhtyar, Maheen and Noor, Waheed and Basit, Abdul and Ullah, Ihsan (2016). Performance enhancement of patch-based descriptors for image copy detection. <i>International Journal of Advanced Computer Science and Applications</i>, <b>7</b>(3).</p></div>
-                        <div class="publication 2016"><p>Sanjrani, Anwar Ali and Baber, Junaid and Bakhtyar, Maheen and Noor, Waheed and Khalid, Muhammad (2016). Handwritten optical character recognition system for Sindhi numerals. In <i>2016 International Conference on Computing, Electronic and Electrical Engineering (ICE Cube)</i>, 262--267.</p></div>
-                </div>
+                        <div class="publication-card 2024">
+                            <h5>Vulnerability detection in Java source code using a quantum convolutional neural network with self-attentive pooling, deep sequence, and graph-based hybrid feature extraction</h5>
+                            <p>Hussain, Shumaila and Nadeem, Muhammad and Baber, Junaid and Hamdi, Mohammed and Rajab, Adel and Al Reshan, Mana Saleh and Shaikh, Asadullah (2024). In <i>Scientific Reports</i>, 14(1), 7406.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/shumaila_2024.pdf" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/Vul-Detect-Code/Vul-Detect" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2023">
+                            <h5>An efficient cluster optimization framework for internet of things (IoT) based Wireless Body Area Networks</h5>
+                            <p>Aadil, Farhan and Song, Oh-young and Mushtaq, Mahreen and Maqsood, Muazzam and Ejaz Sheikh, Sadia and Baber, Junaid (2023). In <i>Journal of Enterprise Information Management</i>, 36(3), 839--860.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/3D_Lidar_2023.pdf" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2023">
+                            <h5>Efficient Detection and Tracking of Human Using 3D LiDAR Sensor</h5>
+                            <p>Gómez, Juan and Aycard, Olivier and Baber, Junaid (2023). In <i>Sensors</i>, 23(10), 4720.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid/LiDAR_Tracking_3D" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2023">
+                            <h5>GENDER BASED MONITORING OF SOP’s DURING COVID-19 USING MACHINE LEARNING</h5>
+                            <p>Ahmad, Bilal and Babar, Junaid and Bakhtyar, Maheen and Ullah, Ihsan (2023). In <i>Journal of Applied and Emerging Sciences</i>, 13(1), 56--60.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2023">
+                            <h5>Predicting COVID-19 Trends with Comparative Analysis of ARIMA and ANN Models</h5>
+                            <p>Shah, Jahangeer and Babar, Junaid and Al Rasheed, Haroon and Khalid, Muhammad (2023). In <i>Pakistan Journal of Emerging Science and Technologies (PJEST)</i>, 4(4).</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Towards intelligent P2P IPTV overlay management through classification of peers</h5>
+                            <p>Ali, Muhammad and Asghar, Rizwan and Ullah, Ihsan and Ahmed, Atiq and Noor, Waheed and Baber, Junaid (2022). In <i>Peer-to-Peer Networking and Applications</i>, 15(1), 827--838.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Sentiment Analysis of Roman Urdu on E-Commerce Reviews Using Machine Learning</h5>
+                            <p>Bilal Chandio, Asadullah Shaikh, Maheen Bakhtyar, Mesfer Alrizq, Junaid Baber, Adel Sulaiman, Adel Rajab, Waheed Noor (2022). In <i>CMES-Computer Modeling in Engineering & Sciences</i>.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Deep transferable learning on heartbeat classification for imbalance dataset</h5>
+                            <p>Sabir, Imran and Baber, Junaid and Ahmed, Atiq and Sheikh, Naveed and Bakhtyar, Maheen and Khan, Azam and Devi, Varsha (2022). In <i>Journal of Intelligent & Fuzzy Systems</i>, 43(2), 2057--2067.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Extended framework for Sindhi numerals OCR using gradient orientation histograms</h5>
+                            <p>Sanjrani, Anwar Ali and Baber, Junaid and Bakhtyar, Maheen and Ullah, Ihsan and Naveed, M Shumail and Noor, Waheed and Basit, Abdul and Khan, Azam and Sheikh, Naveed (2022). In <i>Journal of Intelligent & Fuzzy Systems</i>, 43(2), 2045--2056.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Semantic similarity based food entities recognition using WordNet</h5>
+                            <p>Butt, Sahrish and Bakhtyar, Maheen and Noor, Waheed and Baber, Junaid and Ullah, Ihsan and Ahmed, Atiq and Basit, Abdul and Kakar, M Saeed H (2022). In <i>Journal of Intelligent & Fuzzy Systems</i>, 43(2), 2069--2078.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Attention-based RU-BiLSTM sentiment analysis model for roman Urdu</h5>
+                            <p>Chandio, Bilal Ahmed and Imran, Ali Shariq and Bakhtyar, Maheen and Daudpota, Sher Muhammad and Baber, Junaid (2022). In <i>Applied Sciences</i>, 12(7), 3641.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Cloud-based face recognition for low resource clients</h5>
+                            <p>Abbas, M Zain and Baber, Junaid and Bakhtyar, Maheen and Khan, Azam and Saeed, Adnan (2022). In <i>Security and Privacy Trends in Cloud Computing and Big Data</i>, 73--84.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Smart classroom monitoring using novel real-time facial expression recognition system</h5>
+                            <p>Fakhar, Shariqa and Baber, Junaid and Bazai, Sibghat Ullah and Marjan, Shah and Jasinski, Michal and Jasinska, Elzbieta and Chaudhry, Muhammad Umar and Leonowicz, Zbigniew and Hussain, Shumaila (2022). In <i>Applied Sciences</i>, 12(23), 12134.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/Shariqa_2022.pdf" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Human arm motion prediction for collision avoidance in a shared workspace</h5>
+                            <p>Zheng, Pu and Wieber, Pierre-Brice and Baber, Junaid and Aycard, Olivier (2022). In <i>Sensors</i>, 22(18), 6951.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2021">
+                            <h5>Transfer learning approach for classification of histopathology whole slide images</h5>
+                            <p>Ahmed, Shakil and Shaikh, Asadullah and Alshahrani, Hani and Alghamdi, Abdullah and Alrizq, Mesfer and Baber, Junaid and Bakhtyar, Maheen (2021). In <i>Sensors</i>, 21(16), 5361.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2021">
+                            <h5>Learning Predictive Models for Underground Coal Mine Environment Using Sensor Data</h5>
+                            <p>Gul, Ali and Noor, Waheed and Babar, Junaid and Nawaz, Ali and Athar, Syed Owais (2021). In <i>2021 International Conference on Computing, Electronic and Electrical Engineering (ICE Cube)</i>, 1--6.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Facial expression recognition and analysis of interclass false positives using CNN</h5>
+                            <p>Baber, Junaid and Bakhtyar, Maheen and Uddin Ahmed, Kafil and Noor, Waheed and Devi, Varsha and Sammad, Abdul (2020). In <i>Advances in Information and Communication: Proceedings of the 2019 Future of Information and Communication Conference (FICC), Volume 2</i>, 46--54.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>A spectrogram-based deep feature assisted computer-aided diagnostic system for Parkinson’s disease</h5>
+                            <p>Zahid, Laiba and Maqsood, Muazzam and Durrani, Mehr Yahya and Bakhtyar, Maheen and Baber, Junaid and Jamal, Habibullah and Mehmood, Irfan and Song, Oh-Young (2020). In <i>IEEE Access</i>, 8, 35482--35495.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Urdu handwritten character recognition using deep learning</h5>
+                            <p>Jan, Ali and Baber, Junaid and Sanjrani, Anwar Ali and Bakhtyar, Maheen (2020). In <i>Journal of Information Communication Technologies and Robotic Applications</i>, 42--51.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Empirical evaluation of activation functions in deep convolution neural network for facial expression recognition</h5>
+                            <p>Khalid, Muhammad and Baber, Junaid and Kasi, Mumraiz Khan and Bakhtyar, Maheen and Devi, Varsha and Sheikh, Naveed (2020). In <i>2020 43rd International conference on telecommunications and signal processing (TSP)</i>, 204--207.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Region-of-interest based transfer learning assisted framework for skin cancer detection</h5>
+                            <p>Ashraf, Rehan and Afzal, Sitara and Rehman, Attiq Ur and Gul, Sarah and Baber, Junaid and Bakhtyar, Maheen and Mehmood, Irfan and Song, Oh-Young and Maqsood, Muazzam (2020). In <i>IEEE Access</i>, 8, 147858--147871.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Predicting the session of an P2P IPTV user through support vector regression (SVR)</h5>
+                            <p>Ali, Muhammad and Ullah, Ihsan and Noor, Waheed and Sajid, Ahthasham and Basit, Abdul and Baber, Junaid (2020). In <i>Engineering, Technology \& Applied Science Research</i>, 10(4), 6021--6026.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Extractive text summarization models for Urdu language</h5>
+                            <p>Nawaz, Ali and Bakhtyar, Maheen and Baber, Junaid and Ullah, Ihsan and Noor, Waheed and Basit, Abdul (2020). In <i>Information Processing \& Management</i>, 57(6), 102383.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Identifying negativity factors from social media text corpus using sentiment analysis method</h5>
+                            <p>Aimal, Mohammad and Bakhtyar, Maheen and Baber, Junaid and Lakho, Sadia and Mohammad, Umar and Ahmed, Warda and Karim, Jahanvash (2020). In <i>International Workshop Soft Computing Applications</i>, 508--518.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2019">
+                            <h5>Video genre identification using clustering-based shot detection algorithm</h5>
+                            <p>Daudpota, Sher Muhammad and Muhammad, Atta and Baber, Junaid (2019). In <i>Signal, Image and Video Processing</i>, 13(7), 1413--1420.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2019">
+                            <h5>Sentiment analysis in e-commerce using svm on roman urdu text</h5>
+                            <p>Noor, Faiza and Bakhtyar, Maheen and Baber, Junaid (2019). In <i>Emerging Technologies in Computing: Second International Conference, iCETiC 2019, London, UK, August 19--20, 2019, Proceedings 2</i>, 213--222.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2019">
+                            <h5>Aspect-based opinion mining on student’s feedback for faculty teaching performance evaluation</h5>
+                            <p>Sindhu, Irum and Daudpota, Sher Muhammad and Badar, Kamal and Bakhtyar, Maheen and Baber, Junaid and Nurunnabi, Mohammad (2019). In <i>IEEE Access</i>, 7, 108729--108741.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- Add more publication cards here -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -322,9 +467,9 @@
             $('#yearSelect').change(function() {
                 var selectedYear = $(this).val();
                 if (selectedYear === 'all') {
-                    $('.publication').show();
+                    $('.publication-card').show();
                 } else {
-                    $('.publication').hide();
+                    $('.publication-card').hide();
                     $('.' + selectedYear).show();
                 }
             });

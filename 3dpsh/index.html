@@ -1,79 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PCD Viewer</title>
+    <title>3D-PSH: 3D LiDAR Object Detection</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
     <style>
-        body { margin: 0; }
-        canvas { display: block; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        #container { padding: 20px; text-align: center; }
+        #title { font-size: 2em; margin-bottom: 10px; }
+        #description { font-size: 1.2em; margin-bottom: 20px; text-align: justify; }
+        .visualization { width: 100%; height: 500px; margin-bottom: 20px; position: relative; }
+        .visualization canvas { display: block; }
+        #gui-container { position: absolute; top: 10px; right: 10px; z-index: 100; }
+        #additional-description { font-size: 1.2em; margin-top: 20px; margin-bottom: 20px; text-align: justify; }
     </style>
 </head>
 <body>
+    <div id="container">
+        <div id="title">3D-PSH: 3D LiDAR Object Detection Using Adaptive Clustering and 3D Point Spatial Histograms</div>
+        <div id="title">Junaid Baber, Olivier Aycard</div>
+        <div id="description">
+            The advent of 3D LiDAR technology has revolutionized object detection in applications such as autonomous driving, robotics, and advanced driver-assistance systems. However, existing methods often require substantial computational resources, limiting their practicality for real-time applications on devices with constrained hardware capabilities. This paper presents an efficient and lightweight 3D LiDAR object detection framework, 3D-PSH, that combines adaptive clustering with 3D Point Spatial Histograms (3D-PSH) and classical classification techniques to address these challenges.
+
+            Our framework begins with an adaptive clustering algorithm that segments the point cloud data into distinct clusters, representing potential objects. 3D Point Spatial Histograms (3D-PSH) are then computed from these clusters and subsequently quantized into a Bag of Visual Words (BoVW) to create a compact and informative representation. These representations are then classified using robust classical classification methods to identify object types, such as pedestrians and vehicles. This multi-step approach ensures a balance between computational efficiency and detection accuracy, making it suitable for real-time deployment.
+
+            Extensive experiments on the KITTI dataset and our live sensor data demonstrate the effectiveness and efficiency of our proposed framework. The results indicate that our method achieves competitive accuracy while significantly reducing computational requirements compared to traditional approaches. This framework offers a practical solution for deploying 3D object detection in a wide range of applications, particularly where computational resources are limited.
+        </div>
+
+        <div class="visualization" id="visualization1">
+            <div id="gui-container1"></div>
+        </div>
+        <div id="container"></div>
+        <div id="additional-description">
+            Visual illustration of clustering on a 3D point cloud in an indoor environment. The above image shows the original point cloud, while the below
+image displays the clusters identified as candidate objects. 
+        </div>
+
+        <div class="visualization" id="visualization2">
+            <div id="gui-container2"></div>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "../3djs/build/three.module.js",
+                "three/addons/": "../3djs/jsm/"
+            }
+        }
+    </script>
+
     <script type="module">
-        import * as THREE from '../js/three.module.js';
-        import { OrbitControls } from '../js/OrbitControls.js';
-        import { PCDLoader } from '../js/PCDLoader.js';
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { PCDLoader } from 'three/addons/loaders/PCDLoader.js';
+        import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 
-        // Initialize the scene
-        const scene = new THREE.Scene();
+        function createVisualization(containerId, guiContainerId, pcdFile) {
+            const container = document.getElementById(containerId);
+            const guiContainer = document.getElementById(guiContainerId);
 
-        // Set up the camera
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.set(0, 0, 10);
+            const scene = new THREE.Scene();
 
-        // Set up the renderer
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
+            const camera = new THREE.PerspectiveCamera(30, container.clientWidth / container.clientHeight, 0.01, 40);
+            camera.position.set(0, 0, 1);
+            scene.add(camera);
 
-        // Add orbit controls
-        const controls = new OrbitControls(camera, renderer.domElement);
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
 
-        // Add ambient light
-        const ambientLight = new THREE.AmbientLight(0xFFFFFF, 1);
-        scene.add(ambientLight);
+            const controls = new OrbitControls(camera, renderer.domElement);
+            controls.minDistance = 0.5;
+            controls.maxDistance = 10;
+            controls.addEventListener('change', () => render(renderer, scene, camera));
 
-        // Add directional light for better visibility
-        const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1);
-        directionalLight.position.set(5, 5, 5).normalize();
-        scene.add(directionalLight);
+            const gridHelper = new THREE.GridHelper(10, 10);
+            scene.add(gridHelper);
 
-        // Load the PCD file
-        const loader = new PCDLoader();
-        loader.load(
-            'augmented_cloud_27.pcd', // Use the correct path to your PCD file
-            function (points) {
+            const axesHelper = new THREE.AxesHelper(5);
+            scene.add(axesHelper);
+
+            const ambientLight = new THREE.AmbientLight(0x404040);
+            scene.add(ambientLight);
+
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(1, 1, 1).normalize();
+            scene.add(directionalLight);
+
+            const loader = new PCDLoader();
+            loader.load(pcdFile, function (points) {
+                points.geometry.center();
+                points.geometry.rotateX(Math.PI);
+                points.name = 'PointCloud';
+
+                const positions = points.geometry.attributes.position.array;
+                for (let i = 0; i < positions.length; i += 3) {
+                    const x = positions[i];
+                    const z = positions[i + 2];
+                    positions[i] = z;
+                    positions[i + 2] = x;
+                }
+                points.geometry.attributes.position.needsUpdate = true;
+
+                points.material.size = 0.07;
                 scene.add(points);
-                const center = points.geometry.boundingSphere.center;
+
+                const boundingBox = new THREE.Box3().setFromObject(points);
+                const center = boundingBox.getCenter(new THREE.Vector3());
+                const size = boundingBox.getSize(new THREE.Vector3());
+
                 controls.target.set(center.x, center.y, center.z);
                 controls.update();
-                camera.position.set(center.x, center.y, center.z + 10); // Position camera in front of point cloud
-                console.log('PCD file loaded successfully');
-            },
-            function (xhr) {
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-            },
-            function (error) {
+
+                const maxDim = Math.max(size.x, size.y, size.z);
+                const fov = camera.fov * (Math.PI / 180);
+                let cameraZ = Math.abs(maxDim / 2 * Math.tan(fov * 2));
+                cameraZ *= 2;
+                camera.position.set(center.x, center.y, cameraZ);
+                camera.lookAt(center);
+
+                const gui = new GUI({ autoPlace: false });
+                guiContainer.appendChild(gui.domElement);
+                gui.add(points.material, 'size', 0.001, 0.9).onChange(() => render(renderer, scene, camera));
+                gui.addColor(points.material, 'color').onChange(() => render(renderer, scene, camera));
+                gui.open();
+
+                render(renderer, scene, camera);
+            }, undefined, function (error) {
                 console.error('An error happened while loading the PCD file', error);
-            }
-        );
+            });
 
-        // Handle window resize
-        window.addEventListener('resize', function () {
-            camera.aspect = window.innerWidth / window.innerHeight;
+            window.addEventListener('resize', () => {
+                onWindowResize(container, renderer, camera);
+            });
+        }
+
+        function onWindowResize(container, renderer, camera) {
+            camera.aspect = container.clientWidth / container.clientHeight;
             camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            render(renderer, camera.scene, camera);
+        }
 
-        // Animation loop
-        const animate = function () {
-            requestAnimationFrame(animate);
-            controls.update();
+        function render(renderer, scene, camera) {
             renderer.render(scene, camera);
-        };
+        }
 
-        animate();
+        createVisualization('visualization1', 'gui-container1', './models/1.pcd');
+        createVisualization('visualization2', 'gui-container2', './models/2.pcd');
     </script>
 </body>
 </html>

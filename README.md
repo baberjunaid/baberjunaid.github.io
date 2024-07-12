@@ -1,5 +1,5 @@
 # Junaid Baber, Ph.D.
-Email: junaidbaber@ieee.org | Phone: +123-456-7890 | [Google Scholar](https://scholar.google.com/citations?hl=th&user=rggPjyoAAAAJ&view_op=list_works&sortby=pubdate)
+Email: junaidbaber@ieee.org | [Google Scholar](https://scholar.google.com/citations?hl=th&user=rggPjyoAAAAJ&view_op=list_works&sortby=pubdate)
 
 ---
 

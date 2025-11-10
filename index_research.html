@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junaid Baber - Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .project-title {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .project-title:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .project-details {
+            display: none;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .publication-card {
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #f8f9fa;
+        }
+        .publication-card h5 {
+            margin: 0;
+        }
+        .publication-card .btn-group {
+            margin-top: 10px;
+        }
+        .publication-note {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .about-me-text {
+            text-align: justify;
+        }
+    </style>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Junaid Baber</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="assets/junaidDB.jpg" alt="Junaid Baber" class="profile-img">
+                    <h2 class="section-title">About Me</h2>
+                    
+                    <p class="about-me-text">
+                        I am a dedicated researcher with extensive expertise in machine learning, deep learning, data analytics and their 
+                        applications across various domains. With a robust academic background and years of hands-on experience, 
+                        I have contributed significantly to the fields of multimedia processing, retrieval, and advanced computational techniques. 
+                        As a proactive scholar, I have authored numerous publications in prestigious journals and conferences, 
+                        reflecting my commitment to advancing knowledge and solving real-world problems through innovative technology solutions. 
+                        Currently, I am actively engaged in projects that bridge the gap between theoretical research and practical applications, 
+                        aiming to drive impactful change in both academic and industrial settings.
+
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Education</h2>
+                    <ul>
+                        <li><strong>Ph.D. in Multimedia Processing and Retrieval</strong>, AIT, Thailand (2011-2013)</li>
+                        <li><strong>M.Sc. in Computer Science</strong>, AIT, Thailand (2008-2010)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employment History Section -->
+        <section id="experience">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Employment History</h2>
+                    <ul>
+                        <li><strong>Researcher, LIG, UGA, France</strong> (Dec 2024 – Present) - LLM and SLM-based models for software engineering</li>
+                        <li><strong>Researcher, GIPSA-LAB, France</strong> (Dec 2023 – Nov 2024)</li>
+                        <li><strong>Researcher, LIG, UGA, France</strong> (Dec 2021 – Nov 2023)</li>
+                        <li><strong>ICT Expert, UNDP Balochistan Chapter & GIL Balochistan</strong> (Mar 2017 – Dec 2021)</li>
+                        <li><strong>Assistant Professor, University of Balochistan</strong> (Jan 2014 – Nov 2021)</li>
+                        <li><strong>Visiting Researcher, National Institute of Informatics, Tokyo, Japan </strong> (June 2010 - Dec 2011)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Skills</h2>
+                    <ul>
+                        <li>Python, MATLAB, C++, SQL, XML/XSL, LaTeX</li>
+                        <li>TensorFlow, PyTorch, Keras</li>
+                        <li>MySQL, PostgreSQL, ORMs, SQLAlchemy, Flask, Django</li>
+                        <li>HTML, CSS, JavaScript, Apache Web Server, SIS</li>
+                        <li>Robot OS (ROS), RVIZ</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Selected Projects</h2>
+                    <div class="project">
+                        <div class="project-title" data-target="#project1">Human Robot Collaboration</div>
+                        <div id="project1" class="project-details">
+                            Developed an innovative framework for predicting human hand motion in shared workspaces with robots, enhancing safety and efficiency in human-robot collaboration. Created a custom dataset of human hand trajectories by simulating intentional collisions between humans and robots. Utilized 3D cell quantization for sensitive hand position data and integrated advanced machine learning models (vector embedding) to improve motion prediction accuracy. Leveraged ANNOY for efficient nearest neighbor search, ensuring real-time performance with high precision. Published a paper demonstrating the framework's superior predictive capabilities over baseline models.
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-title" data-target="#project2">Object Detection in 3-D LiDAR</div>
+                        <div id="project2" class="project-details">
+                            Developed an efficient and lightweight 3D LiDAR object detection framework, 3D-PSH, combining adaptive clustering with 3D Point Spatial Histograms (3D-PSH) and classical classification techniques. The framework segments point cloud data into clusters, computes 3D-PSH, and uses a Bag of Visual Words (BoVW) approach for compact representation. This method, tested on the KITTI dataset and live sensor data, balances computational efficiency with high detection accuracy, making it suitable for real-time applications on devices with limited hardware capabilities. Published a paper demonstrating its competitive accuracy and reduced computational requirements compared to traditional methods.
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-title" data-target="#project3">Raman Spectroscopic Analysis</div>
+                        <div id="project3" class="project-details">
+                            Developed deep learning models for predicting biomedical classes based on Raman spectroscopic data. The models were trained on datasets with class labels derived from control Nucleus, MV Data, and SARS Nucleus. This approach facilitated accurate classification and analysis of biomedical samples, demonstrating the potential of deep learning in enhancing spectroscopic data interpretation for biomedical applications.
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-title" data-target="#project6">Smart Surveillance using Machine Learning</div>
+                        <div id="project6" class="project-details">
+                            Proposed and developed a smart surveillance solution for the Government of Balochistan to eﬃciently monitor and recognize individuals entering premises daily with
+minimal interaction. Utilizing simple IP cameras and state-of-the-art machine learning APIs, we created a face recognition based surveillance system. This system integrates multiple IP cameras to monitor, recognize, and
+track individuals, projecting all the information onto a uniﬁed web-based dashboard. This innovative solution enhances security and operational eﬃciency by providing real-time monitoring and recognition capabilities
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-title" data-target="#project4">Rhetorical Strategies in Crowdfunding</div>
+                        <div id="project4" class="project-details">
+                            Developed and utilized large language models (LLMs) to classify rhetorical strategies in crowdfunding project submissions. This project involved analyzing the correlation between various LLM models and ground truth data to evaluate their effectiveness in identifying persuasive elements that influence funding success. The insights gained from this research contribute to understanding how different rhetorical techniques impact the outcomes of crowdfunding campaigns.
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-title" data-target="#project5">Social Media Data Analysis</div>
+                        <div id="project5" class="project-details">
+                            This project focused on the automatic sentiment analysis of public opinion towards government and official tweets, which proved to be particularly valuable during the COVID-19 era. One of the primary challenges was dealing with the multilingual nature of the content, which included English, Urdu, and Roman Urdu. Since Urdu and Roman Urdu are low-resource languages, we addressed this by creating a novel benchmark dataset and training a specialized Roman Urdu classifier. Ultimately, we developed a comprehensive approach to effectively handle the multilinguality of tweets and social media posts, providing accurate sentiment analysis across languages.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Research Publications</h2>
+                    <p class="publication-note">Selected publications only. Complete list available on <a href="https://scholar.google.co.th/citations?hl=en&user=rggPjyoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>.</p>
+                    <div class="form-group">
+                        <label for="yearSelect">Select Year:</label>
+                        <select class="form-control" id="yearSelect">
+                            <option value="all">All</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            
+                        </select>
+                    </div>
+                    <div id="publicationsList">
+                        <div class="publication-card 2024">
+                            <h5>Vulnerability detection in Java source code using a quantum convolutional neural network with self-attentive pooling, deep sequence, and graph-based hybrid feature extraction</h5>
+                            <p>Hussain, Shumaila and Nadeem, Muhammad and Baber, Junaid and Hamdi, Mohammed and Rajab, Adel and Al Reshan, Mana Saleh and Shaikh, Asadullah (2024). In <i>Scientific Reports</i>, 14(1), 7406.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/shumaila_2024.pdf" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/Vul-Detect-Code/Vul-Detect" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2023">
+                            <h5>An efficient cluster optimization framework for internet of things (IoT) based Wireless Body Area Networks</h5>
+                            <p>Aadil, Farhan and Song, Oh-young and Mushtaq, Mahreen and Maqsood, Muazzam and Ejaz Sheikh, Sadia and Baber, Junaid (2023). In <i>Journal of Enterprise Information Management</i>, 36(3), 839--860.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/3D_Lidar_2023.pdf" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2023">
+                            <h5>Efficient Detection and Tracking of Human Using 3D LiDAR Sensor</h5>
+                            <p>Gómez, Juan and Aycard, Olivier and Baber, Junaid (2023). In <i>Sensors</i>, 23(10), 4720.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid/LiDAR_Tracking_3D" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2023">
+                            <h5>GENDER BASED MONITORING OF SOP’s DURING COVID-19 USING MACHINE LEARNING</h5>
+                            <p>Ahmad, Bilal and Babar, Junaid and Bakhtyar, Maheen and Ullah, Ihsan (2023). In <i>Journal of Applied and Emerging Sciences</i>, 13(1), 56--60.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2023">
+                            <h5>Predicting COVID-19 Trends with Comparative Analysis of ARIMA and ANN Models</h5>
+                            <p>Shah, Jahangeer and Babar, Junaid and Al Rasheed, Haroon and Khalid, Muhammad (2023). In <i>Pakistan Journal of Emerging Science and Technologies (PJEST)</i>, 4(4).</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Towards intelligent P2P IPTV overlay management through classification of peers</h5>
+                            <p>Ali, Muhammad and Asghar, Rizwan and Ullah, Ihsan and Ahmed, Atiq and Noor, Waheed and Baber, Junaid (2022). In <i>Peer-to-Peer Networking and Applications</i>, 15(1), 827--838.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Sentiment Analysis of Roman Urdu on E-Commerce Reviews Using Machine Learning</h5>
+                            <p>Bilal Chandio, Asadullah Shaikh, Maheen Bakhtyar, Mesfer Alrizq, Junaid Baber, Adel Sulaiman, Adel Rajab, Waheed Noor (2022). In <i>CMES-Computer Modeling in Engineering & Sciences</i>.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Deep transferable learning on heartbeat classification for imbalance dataset</h5>
+                            <p>Sabir, Imran and Baber, Junaid and Ahmed, Atiq and Sheikh, Naveed and Bakhtyar, Maheen and Khan, Azam and Devi, Varsha (2022). In <i>Journal of Intelligent & Fuzzy Systems</i>, 43(2), 2057--2067.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Extended framework for Sindhi numerals OCR using gradient orientation histograms</h5>
+                            <p>Sanjrani, Anwar Ali and Baber, Junaid and Bakhtyar, Maheen and Ullah, Ihsan and Naveed, M Shumail and Noor, Waheed and Basit, Abdul and Khan, Azam and Sheikh, Naveed (2022). In <i>Journal of Intelligent & Fuzzy Systems</i>, 43(2), 2045--2056.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Semantic similarity based food entities recognition using WordNet</h5>
+                            <p>Butt, Sahrish and Bakhtyar, Maheen and Noor, Waheed and Baber, Junaid and Ullah, Ihsan and Ahmed, Atiq and Basit, Abdul and Kakar, M Saeed H (2022). In <i>Journal of Intelligent & Fuzzy Systems</i>, 43(2), 2069--2078.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Attention-based RU-BiLSTM sentiment analysis model for roman Urdu</h5>
+                            <p>Chandio, Bilal Ahmed and Imran, Ali Shariq and Bakhtyar, Maheen and Daudpota, Sher Muhammad and Baber, Junaid (2022). In <i>Applied Sciences</i>, 12(7), 3641.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Cloud-based face recognition for low resource clients</h5>
+                            <p>Abbas, M Zain and Baber, Junaid and Bakhtyar, Maheen and Khan, Azam and Saeed, Adnan (2022). In <i>Security and Privacy Trends in Cloud Computing and Big Data</i>, 73--84.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Smart classroom monitoring using novel real-time facial expression recognition system</h5>
+                            <p>Fakhar, Shariqa and Baber, Junaid and Bazai, Sibghat Ullah and Marjan, Shah and Jasinski, Michal and Jasinska, Elzbieta and Chaudhry, Muhammad Umar and Leonowicz, Zbigniew and Hussain, Shumaila (2022). In <i>Applied Sciences</i>, 12(23), 12134.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/Shariqa_2022.pdf" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2022">
+                            <h5>Human arm motion prediction for collision avoidance in a shared workspace</h5>
+                            <p>Zheng, Pu and Wieber, Pierre-Brice and Baber, Junaid and Aycard, Olivier (2022). In <i>Sensors</i>, 22(18), 6951.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2021">
+                            <h5>Transfer learning approach for classification of histopathology whole slide images</h5>
+                            <p>Ahmed, Shakil and Shaikh, Asadullah and Alshahrani, Hani and Alghamdi, Abdullah and Alrizq, Mesfer and Baber, Junaid and Bakhtyar, Maheen (2021). In <i>Sensors</i>, 21(16), 5361.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2021">
+                            <h5>Learning Predictive Models for Underground Coal Mine Environment Using Sensor Data</h5>
+                            <p>Gul, Ali and Noor, Waheed and Babar, Junaid and Nawaz, Ali and Athar, Syed Owais (2021). In <i>2021 International Conference on Computing, Electronic and Electrical Engineering (ICE Cube)</i>, 1--6.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Facial expression recognition and analysis of interclass false positives using CNN</h5>
+                            <p>Baber, Junaid and Bakhtyar, Maheen and Uddin Ahmed, Kafil and Noor, Waheed and Devi, Varsha and Sammad, Abdul (2020). In <i>Advances in Information and Communication: Proceedings of the 2019 Future of Information and Communication Conference (FICC), Volume 2</i>, 46--54.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>A spectrogram-based deep feature assisted computer-aided diagnostic system for Parkinson’s disease</h5>
+                            <p>Zahid, Laiba and Maqsood, Muazzam and Durrani, Mehr Yahya and Bakhtyar, Maheen and Baber, Junaid and Jamal, Habibullah and Mehmood, Irfan and Song, Oh-Young (2020). In <i>IEEE Access</i>, 8, 35482--35495.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Urdu handwritten character recognition using deep learning</h5>
+                            <p>Jan, Ali and Baber, Junaid and Sanjrani, Anwar Ali and Bakhtyar, Maheen (2020). In <i>Journal of Information Communication Technologies and Robotic Applications</i>, 42--51.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Empirical evaluation of activation functions in deep convolution neural network for facial expression recognition</h5>
+                            <p>Khalid, Muhammad and Baber, Junaid and Kasi, Mumraiz Khan and Bakhtyar, Maheen and Devi, Varsha and Sheikh, Naveed (2020). In <i>2020 43rd International conference on telecommunications and signal processing (TSP)</i>, 204--207.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Region-of-interest based transfer learning assisted framework for skin cancer detection</h5>
+                            <p>Ashraf, Rehan and Afzal, Sitara and Rehman, Attiq Ur and Gul, Sarah and Baber, Junaid and Bakhtyar, Maheen and Mehmood, Irfan and Song, Oh-Young and Maqsood, Muazzam (2020). In <i>IEEE Access</i>, 8, 147858--147871.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Predicting the session of an P2P IPTV user through support vector regression (SVR)</h5>
+                            <p>Ali, Muhammad and Ullah, Ihsan and Noor, Waheed and Sajid, Ahthasham and Basit, Abdul and Baber, Junaid (2020). In <i>Engineering, Technology \& Applied Science Research</i>, 10(4), 6021--6026.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Extractive text summarization models for Urdu language</h5>
+                            <p>Nawaz, Ali and Bakhtyar, Maheen and Baber, Junaid and Ullah, Ihsan and Noor, Waheed and Basit, Abdul (2020). In <i>Information Processing \& Management</i>, 57(6), 102383.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2020">
+                            <h5>Identifying negativity factors from social media text corpus using sentiment analysis method</h5>
+                            <p>Aimal, Mohammad and Bakhtyar, Maheen and Baber, Junaid and Lakho, Sadia and Mohammad, Umar and Ahmed, Warda and Karim, Jahanvash (2020). In <i>International Workshop Soft Computing Applications</i>, 508--518.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2019">
+                            <h5>Video genre identification using clustering-based shot detection algorithm</h5>
+                            <p>Daudpota, Sher Muhammad and Muhammad, Atta and Baber, Junaid (2019). In <i>Signal, Image and Video Processing</i>, 13(7), 1413--1420.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2019">
+                            <h5>Sentiment analysis in e-commerce using svm on roman urdu text</h5>
+                            <p>Noor, Faiza and Bakhtyar, Maheen and Baber, Junaid (2019). In <i>Emerging Technologies in Computing: Second International Conference, iCETiC 2019, London, UK, August 19--20, 2019, Proceedings 2</i>, 213--222.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-card 2019">
+                            <h5>Aspect-based opinion mining on student’s feedback for faculty teaching performance evaluation</h5>
+                            <p>Sindhu, Irum and Daudpota, Sher Muhammad and Badar, Kamal and Bakhtyar, Maheen and Baber, Junaid and Nurunnabi, Mohammad (2019). In <i>IEEE Access</i>, 7, 108729--108741.</p>
+                            <div class="btn-group" role="group">
+                                <a href="assets/papers/" class="btn btn-primary btn-sm" target="_blank">PDF</a>
+                                <a href="https://github.com/baberjunaid" class="btn btn-secondary btn-sm" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- Add more publication cards here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Contact</h2>
+                    <p>Email: <a href="mailto:junaidbaber.cs@gmail.com">junaidbaber.cs@gmail.com</a></p>
+                    <p>Google Scholar: <a href="https://scholar.google.co.th/citations?hl=en&user=rggPjyoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Publications section
+            $('#yearSelect').change(function() {
+                var selectedYear = $(this).val();
+                if (selectedYear === 'all') {
+                    $('.publication-card').show();
+                } else {
+                    $('.publication-card').hide();
+                    $('.' + selectedYear).show();
+                }
+            });
+
+            // Projects section
+            $('.project-title').click(function() {
+                var target = $(this).data('target');
+                $(target).toggle();
+            });
+        });
+    </script>
+</body>
+</html>

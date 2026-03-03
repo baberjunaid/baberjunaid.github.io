@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junaid Baber | Business Researcher Portfolio</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --primary:#0f4c81; --primary-dark:#0b3a63; --text:#1f2937; --muted:#4b5563; --bg:#f4f7fb; }
+    * { box-sizing: border-box; }
+    body { padding-top:72px; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; color:var(--text); overflow-x:hidden; }
+    img { max-width:100%; height:auto; }
+    .navbar { background:linear-gradient(90deg,var(--primary-dark),var(--primary)); box-shadow:0 2px 12px rgba(0,0,0,.08); }
+    .hero { background: radial-gradient(circle at 10% 10%, #e8f1fb, #ffffff 65%); }
+    .hero-card { background:#fff; border-radius:14px; box-shadow:0 12px 30px rgba(15,76,129,.12); padding:2rem; }
+    .profile-img { width:150px; height:150px; border-radius:50%; object-fit:cover; border:4px solid #fff; box-shadow:0 8px 24px rgba(15,76,129,.22); }
+    section { padding:52px 0; }
+    .section-title { font-size:1.8rem; font-weight:700; margin-bottom:1rem; }
+    .section-subtitle { color:var(--muted); margin-bottom:1.4rem; }
+    .alt-bg { background:var(--bg); }
+    .timeline { border-left:3px solid #c7daee; padding-left:1rem; }
+    .timeline-item { margin-bottom:1.3rem; position:relative; }
+    .timeline-item::before { content:""; width:12px; height:12px; border-radius:50%; background:var(--primary); position:absolute; left:-1.43rem; top:.35rem; }
+    .timeline-date { color:var(--muted); font-size:.93rem; }
+    .card-lite { background:#fff; border:1px solid #dde6f0; border-radius:12px; padding:1rem; margin-bottom:1rem; }
+    .badge-lite { display:inline-block; background:#e8f2fb; color:var(--primary-dark); border-radius:999px; padding:4px 10px; margin:2px; font-size:.82rem; }
+    h1, h2, h3, h4, h5, p, li, a, .section-subtitle, .timeline-item h5 { overflow-wrap:anywhere; }
+
+    @media (max-width: 991px) {
+      body { padding-top: 66px; }
+      section { padding: 42px 0; }
+    }
+
+    @media (max-width: 767px) {
+      .section-title { font-size: 1.45rem; }
+      .section-subtitle { font-size: 0.95rem; }
+      .hero-card { padding: 1.2rem; }
+      .hero h1, h1 { font-size: 1.45rem; line-height: 1.25; }
+      .profile-img { width: 118px; height: 118px; }
+      .card-lite, .pub-card { padding: 0.85rem; }
+      .timeline { padding-left: 0.85rem; }
+      .timeline-item::before { left: -1.28rem; }
+      .navbar .nav-link { padding-top: 0.35rem; padding-bottom: 0.35rem; }
+    }
+
+    @media (max-width: 420px) {
+      body { padding-top: 62px; }
+      section { padding: 34px 0; }
+      .section-title { font-size: 1.3rem; }
+      .hero-card { padding: 1rem; }
+      .profile-img { width: 102px; height: 102px; }
+      .card-lite { padding: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#about">Junaid Baber</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navBar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Appointments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#funded">Funded Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about" class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center mb-3 mb-md-0"><img src="assets/junaidDB.jpg" alt="Junaid Baber" class="profile-img"></div>
+          <div class="col-md-9">
+            <h1 class="mb-2">Business Researcher in AI, Information Systems, and Digital Transformation</h1>
+            <p class="lead mb-2">AI and Information Systems (IS) expert with 10+ years applying data analytics, large language models (LLMs), and intelligent automation to enhance organizational decision-making, digital transformation, and business intelligence.</p>
+            <p class="mb-0">Specialized in developing AI-driven systems for strategic insights, predictive modeling, and human-AI collaboration in diverse sectors, including governance and education.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Academic Appointments</h2>
+      <p class="section-subtitle">Research, academic leadership, and cross-sector AI implementation across France and Pakistan.</p>
+      <div class="timeline">
+        <article class="timeline-item"><h5>Researcher — AI, LLMs & Intelligent Automation — LIG, UGA, France</h5><p class="timeline-date">2023 – Jul 2026</p></article>
+        <article class="timeline-item"><h5>Associate Professor (TTS) — University of Balochistan, Pakistan</h5><p class="timeline-date">Dec 2021 – EoL</p></article>
+        <article class="timeline-item"><h5>Researcher — GIPSA-LAB, France</h5><p class="timeline-date">Dec 2023 – Nov 2024</p></article>
+        <article class="timeline-item"><h5>Researcher — LIG, UGA, France</h5><p class="timeline-date">Dec 2021 – Nov 2023</p></article>
+        <article class="timeline-item"><h5>ICT Expert — UNDP Balochistan & GIL Balochistan</h5><p class="timeline-date">Mar 2017 – Dec 2021</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="funded" class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">Research & Funded Projects (PI / Co-PI / Key Expert)</h2>
+      <div class="card-lite">
+        <h5>EU / Erasmus+ Capacity Building (Associate Partner / Key Expert)</h5>
+        <p><strong>RAPID</strong> — Recasting best prActices of euroPean universities during pandemic for Improving online eDucation in Pakistan</p>
+        <p><strong>Funding:</strong> European Commission, Erasmus+ (CBHE, Strand 2), 36 months</p>
+        <p><strong>Proposal No.:</strong> 101083220 | <strong>Call:</strong> ERASMUS-EDU-2022-CBHE</p>
+        <p><strong>Role:</strong> Key Expert / University focal contribution (University of Balochistan — Associate Partner)</p>
+        <p><strong>Focus:</strong> Digital transformation of higher education in Pakistan; online education policy, faculty capacity building, and eLearning infrastructure.</p>
+        <p><strong>Consortium (selected):</strong> HEC Pakistan, Sukkur IBA University, IBA Karachi, LUMS, NTNU Norway, Linnaeus University Sweden, Sapienza University of Rome.</p>
+        <p class="mb-1"><strong>Key contributions:</strong></p>
+        <ul>
+          <li>Supported digital transformation planning and practical online education adoption in remote-university contexts.</li>
+          <li>Contributed domain expertise in eLearning systems, digital platforms, and data-driven quality monitoring aligned with IS governance.</li>
+        </ul>
+      </div>
+      <div class="card-lite">
+        <h5>Smart Profiling of Visitors (PI / Technical Lead) — 2020</h5>
+        <p>Automatic profiling using CCTV: registered individuals are recognized and marked present. Core components: CCTV analytics, identity recognition workflow, attendance logging, reporting interface.</p>
+      </div>
+      <div class="card-lite">
+        <h5>SOPs Monitoring System During COVID (PI / Technical Lead) — 2020</h5>
+        <p>Client/server compliance system for mask detection at entry points with web dashboard and daily administrative reporting.</p>
+      </div>
+      <div class="card-lite">
+        <h5>Smart Classroom (PI / Technical Lead) — 2017</h5>
+        <p>Automated attendance, attention monitoring with lecturer alerts, and software-based lecture feedback collection.</p>
+      </div>
+      <div class="card-lite">
+        <h5>Beyond Classical Teaching: Smart Classroom System (Co-PI / Research Lead) — 2018</h5>
+        <p>Facial-expression-based lecture assessment and correlation analysis between automated affective signals and student feedback.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Selected Research Projects</h2>
+      <p class="section-subtitle">Applied research projects spanning AI for governance, intelligent automation, multilingual analytics, and robotics.</p>
+      <div class="card-lite">
+        <h5>Large Language Models for Low-Code/No-Code Automation</h5>
+        <p>Designed LLM-based workflows for domain-specific model generation and intelligent automation in low-code/no-code environments.</p>
+        <p><strong>Methods:</strong> Prompt engineering, grammar-constrained generation, model evaluation pipelines.</p>
+      </div>
+      <div class="card-lite">
+        <h5>Smart Surveillance & AI Monitoring Systems (Government Project)</h5>
+        <p>Built an AI-enabled surveillance architecture integrating IP cameras, recognition pipelines, and operational dashboards for public-sector deployment.</p>
+        <p><strong>Methods:</strong> Computer vision, face recognition workflows, web-based monitoring.</p>
+      </div>
+      <div class="card-lite">
+        <h5>Multilingual Sentiment Analysis for Policy Intelligence</h5>
+        <p>Developed multilingual sentiment analysis resources for English, Urdu, and Roman Urdu, including benchmark dataset construction and model training.</p>
+        <p><strong>Methods:</strong> NLP classification, low-resource language handling, social media analytics.</p>
+      </div>
+      <div class="card-lite">
+        <h5>Human Motion Prediction for Intelligent Systems</h5>
+        <p>Implemented embedding-based prediction models for human motion in shared workspaces to support safer human-robot interaction.</p>
+        <p><strong>Methods:</strong> Vector embeddings, trajectory quantization, nearest-neighbor retrieval.</p>
+      </div>
+      <div class="card-lite">
+        <h5>3D LiDAR Object Detection Framework</h5>
+        <p>Developed a lightweight 3D object detection method balancing real-time performance and detection quality on constrained hardware.</p>
+        <p><strong>Methods:</strong> Adaptive clustering, 3D point spatial histograms, compact feature modeling.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="teaching" class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">Teaching & Supervision</h2>
+      <p class="section-subtitle">Cross-level teaching portfolio linking technical depth with managerial relevance in business and digital transformation contexts.</p>
+      <div class="card-lite">
+        <h5>Courses Taught (UG/PG)</h5>
+        <ul>
+          <li>Research Methodology (quantitative/qualitative design, paper writing, dissertation structuring).</li>
+          <li>AI for Everyone (business applications, responsible AI, managerial adoption use-cases).</li>
+          <li>Information Retrieval & Search Systems (text indexing, PageRank, relevance feedback, ANN search).</li>
+          <li>Advanced Algorithms & Design (graph-based methods, optimization, complexity analysis).</li>
+          <li>Machine Learning & Data Analytics (predictive modeling, multilingual NLP, sentiment analytics).</li>
+        </ul>
+      </div>
+      <div class="card-lite">
+        <h5>Supervision & Mentoring</h5>
+        <ul>
+          <li>Supervision of master's and PhD students in AI, analytics, and information systems.</li>
+          <li>Dissertation mentoring in data mining, NLP, and decision-support applications.</li>
+          <li>Research mentoring for graduate interns and interdisciplinary project teams.</li>
+        </ul>
+      </div>
+      <ul>
+        <li><strong>Teaching orientation:</strong> practical, data-driven, and decision-focused curriculum design.</li>
+        <li><strong>Academic contribution:</strong> course modernization aligned with digital transformation and industry readiness.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+      <p>25+ peer-reviewed journal and conference publications. Full list available on Google Scholar and DBLP.</p>
+      <div class="card-lite">
+        <h5>Selected Journal Publications (Recent)</h5>
+        <ul>
+          <li><strong>Scientific Reports (2024):</strong> Vulnerability detection in Java source code using hybrid deep and graph-based features.</li>
+          <li><strong>Sensors (2023):</strong> Efficient detection and tracking of humans using 3D LiDAR sensor data.</li>
+          <li><strong>Sensors (2022):</strong> Human arm motion prediction for collision avoidance in shared workspaces.</li>
+          <li><strong>Applied Sciences (2022):</strong> Smart classroom monitoring via real-time facial expression recognition.</li>
+          <li><strong>IEEE Access / Information Processing & Management:</strong> Applied analytics, sentiment, and intelligent systems research.</li>
+        </ul>
+      </div>
+      <div class="card-lite">
+        <h5>Selected Recent Conference Publications</h5>
+        <ul>
+          <li><strong>ICARCV 2024 (IEEE):</strong> Word embeddings and 3D quantization for human hand motion prediction.</li>
+          <li><strong>ICTAI 2024 (IEEE):</strong> 3D-PSH lightweight 3D LiDAR object detection framework.</li>
+          <li><strong>New Trends in Intelligent Software Methodologies (2025):</strong> Grammar-based DSL model generation using open LLMs.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:junaidbaber.cs@gmail.com">junaidbaber.cs@gmail.com</a></p>
+      <p><strong>Website:</strong> <a href="https://baberjunaid.github.io" target="_blank" rel="noopener noreferrer">baberjunaid.github.io</a></p>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

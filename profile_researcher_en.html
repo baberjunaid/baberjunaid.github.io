@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junaid Baber | Researcher Profile</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --primary:#0f4c81; --primary-dark:#0b3a63; --text:#1f2937; --muted:#4b5563; --bg:#f4f7fb; }
+    * { box-sizing: border-box; }
+    body { padding-top:72px; color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; overflow-x:hidden; }
+    img { max-width:100%; height:auto; }
+    .navbar { background:linear-gradient(90deg,var(--primary-dark),var(--primary)); box-shadow:0 2px 12px rgba(0,0,0,.08); }
+    section { padding:52px 0; }
+    .hero { background:radial-gradient(circle at 10% 10%, #e8f1fb, #fff 65%); }
+    .hero-card { background:#fff; border-radius:14px; box-shadow:0 12px 30px rgba(15,76,129,.12); padding:2rem; }
+    .profile-img { width:150px; height:150px; border-radius:50%; object-fit:cover; border:4px solid #fff; box-shadow:0 8px 24px rgba(15,76,129,.22); }
+    .section-title { font-size:1.8rem; font-weight:700; margin-bottom:1rem; }
+    .section-subtitle { color:var(--muted); margin-bottom:1rem; }
+    .alt-bg { background:var(--bg); }
+    .pub-card { border:1px solid #dbe4ef; border-radius:10px; padding:12px; margin-bottom:10px; background:#fff; }
+    .pub-meta { color:var(--muted); font-size:.92rem; }
+    h1, h2, h3, h4, h5, p, li, a, .section-subtitle, .pub-card strong { overflow-wrap:anywhere; }
+
+    @media (max-width: 991px) {
+      body { padding-top: 66px; }
+      section { padding: 42px 0; }
+    }
+
+    @media (max-width: 767px) {
+      .section-title { font-size: 1.45rem; }
+      .section-subtitle { font-size: 0.95rem; }
+      .hero-card { padding: 1.2rem; }
+      .hero h1, h1 { font-size: 1.45rem; line-height: 1.25; }
+      .profile-img { width: 118px; height: 118px; }
+      .card-lite, .pub-card { padding: 0.85rem; }
+      .timeline { padding-left: 0.85rem; }
+      .timeline-item::before { left: -1.28rem; }
+      .navbar .nav-link { padding-top: 0.35rem; padding-bottom: 0.35rem; }
+    }
+
+    @media (max-width: 420px) {
+      body { padding-top: 62px; }
+      section { padding: 34px 0; }
+      .section-title { font-size: 1.3rem; }
+      .hero-card { padding: 1rem; }
+      .profile-img { width: 102px; height: 102px; }
+      .pub-card { padding: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#about">Junaid Baber</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about" class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center mb-3 mb-md-0"><img src="assets/junaidDB.jpg" class="profile-img" alt="Junaid Baber"></div>
+          <div class="col-md-9">
+            <h1>AI & Information Systems Researcher</h1>
+            <p class="section-subtitle">Research on LLMs, intelligent automation, multilingual NLP, robotics perception, and AI-enabled decision support.</p>
+            <p>My work connects theoretical methods to applied deployments in higher education, governance, and real-time intelligent systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="container">
+      <h2 class="section-title">Research Focus</h2>
+      <ul>
+        <li>Large Language Models (LLMs) and grammar-constrained generation</li>
+        <li>AI-enabled decision support and digital transformation</li>
+        <li>Human motion prediction and 3D LiDAR perception</li>
+        <li>Multilingual sentiment analytics for low-resource languages</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="publications" class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">Research Publications</h2>
+      <p class="section-subtitle">Selected recent publications based on your latest publication list.</p>
+      <div class="pub-card">
+        <div><strong>Vulnerability detection in Java source code using a quantum convolutional neural network with self-attentive pooling, deep sequence, and graph-based hybrid feature extraction</strong></div>
+        <div class="pub-meta">Scientific Reports • 2024</div>
+      </div>
+      <div class="pub-card">
+        <div><strong>Efficient Detection and Tracking of Human Using 3D LiDAR Sensor</strong></div>
+        <div class="pub-meta">Sensors • 2023</div>
+      </div>
+      <div class="pub-card">
+        <div><strong>Human arm motion prediction for collision avoidance in a shared workspace</strong></div>
+        <div class="pub-meta">Sensors • 2022</div>
+      </div>
+      <div class="pub-card">
+        <div><strong>Smart classroom monitoring using novel real-time facial expression recognition system</strong></div>
+        <div class="pub-meta">Applied Sciences • 2022</div>
+      </div>
+      <div class="pub-card">
+        <div><strong>Attention-based RU-BiLSTM sentiment analysis model for Roman Urdu</strong></div>
+        <div class="pub-meta">Applied Sciences • 2022</div>
+      </div>
+      <div class="pub-card">
+        <div><strong>Extractive text summarization models for Urdu language</strong></div>
+        <div class="pub-meta">Information Processing &amp; Management • 2020</div>
+      </div>
+      <div class="pub-card">
+        <div><strong>From Text to DSL: Evaluating Grammar-Based Model Generation Using Open LLMs</strong></div>
+        <div class="pub-meta">New Trends in Intelligent Software Methodologies, Tools and Techniques • 2025 (Conference)</div>
+      </div>
+      <div class="pub-card">
+        <div><strong>3D-PSH: Lightweight 3D LiDAR Object Detection Using Adaptive Clustering and 3D Point Spatial Histograms</strong></div>
+        <div class="pub-meta">ICTAI 2024 • IEEE (Conference)</div>
+      </div>
+      <div class="pub-card">
+        <div><strong>Exploring Word Embeddings and 3D Quantization for Human Hand Motion Prediction in Shared Workspace with Robot</strong></div>
+        <div class="pub-meta">ICARCV 2024 • IEEE (Conference)</div>
+      </div>
+      <p class="mt-3 mb-0">Complete profile: <a href="https://scholar.google.co.th/citations?hl=en&user=rggPjyoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Google Scholar</a> | <a href="https://dblp.org/" target="_blank" rel="noopener noreferrer">DBLP</a></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:junaidbaber.cs@gmail.com">junaidbaber.cs@gmail.com</a></p>
+      <p><strong>Website:</strong> <a href="https://baberjunaid.github.io" target="_blank" rel="noopener noreferrer">baberjunaid.github.io</a></p>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

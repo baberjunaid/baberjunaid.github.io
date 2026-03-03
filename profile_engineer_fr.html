@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junaid Baber | Portfolio Ingénieur Machine Learning</title>
+    <meta name="description" content="Portfolio of Junaid Baber, Machine Learning Engineer and Data Scientist specializing in AI/ML systems, computer vision, NLP, and robotics.">
+    <meta property="og:title" content="Junaid Baber | Machine Learning Engineer">
+    <meta property="og:description" content="AI/ML engineer delivering production-grade solutions across CV, NLP, and robotics.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/junaidDB.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Junaid Baber | Machine Learning Engineer">
+    <meta name="twitter:description" content="Portfolio showcasing projects, experience, and research in applied AI.">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --primary-dark: #0b3a63;
+            --text: #1f2937;
+            --muted: #4b5563;
+            --bg-soft: #f4f7fb;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text);
+            background: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            padding-top: 72px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #fff;
+            color: #000;
+            padding: 8px 12px;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            left: 12px;
+            top: 12px;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        section {
+            padding: 56px 0;
+        }
+
+        .section-title {
+            font-size: 1.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+            max-width: 760px;
+            margin-bottom: 2rem;
+        }
+
+        .hero {
+            padding-top: 20px;
+            background: radial-gradient(circle at 10% 10%, #e8f1fb, #ffffff 65%);
+        }
+
+        .hero-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 12px 30px rgba(15, 76, 129, 0.12);
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .lead {
+            color: var(--muted);
+            max-width: 760px;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 8px 24px rgba(15, 76, 129, 0.22);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--bg-soft);
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #e7edf5;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .alt-bg {
+            background: var(--bg-soft);
+        }
+
+        .content-max {
+            max-width: 820px;
+        }
+
+        .timeline {
+            border-left: 3px solid #c7daee;
+            padding-left: 1rem;
+        }
+
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+            position: absolute;
+            left: -1.43rem;
+            top: 0.35rem;
+        }
+
+        .timeline-item h5 {
+            margin-bottom: 0.2rem;
+            font-weight: 700;
+        }
+
+        .timeline-date {
+            color: var(--muted);
+            font-size: 0.93rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+        }
+
+        .skill-category {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 14px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .skill-category h5 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .project-card {
+            border: 1px solid #dde6f0;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .project-title {
+            width: 100%;
+            text-align: left;
+            border: 0;
+            background: #fff;
+            font-weight: 700;
+            padding: 14px 16px;
+            color: var(--text);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .project-title:hover,
+        .project-title:focus {
+            background: #eef5fd;
+            outline: none;
+        }
+
+        .project-title .chevron {
+            float: right;
+            transition: transform 0.2s;
+            color: var(--primary);
+        }
+
+        .project-title[aria-expanded="true"] .chevron {
+            transform: rotate(90deg);
+        }
+
+        .project-details {
+            display: none;
+            border-top: 1px solid #edf2f7;
+            padding: 14px 16px;
+            background: #fbfdff;
+        }
+
+        .project-details.active {
+            display: block;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e8f2fb;
+            color: var(--primary-dark);
+            border-radius: 999px;
+            padding: 4px 9px;
+            font-size: 0.8rem;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-card {
+            border: 1px solid #d8e4f0;
+            border-radius: 12px;
+            padding: 1.2rem;
+            background: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        footer {
+            font-size: 0.92rem;
+            color: var(--muted);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        h1, h2, h3, h4, h5, p, li, a, .section-subtitle, .timeline-item h5 {
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 991px) {
+            body {
+                padding-top: 66px;
+            }
+
+            section {
+                padding: 46px 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            body {
+                padding-top: 64px;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .hero-card {
+                padding: 1.2rem;
+            }
+
+            .profile-img {
+                width: 118px;
+                height: 118px;
+            }
+
+            .btn {
+                width: 100%;
+                margin-bottom: 8px;
+            }
+
+            .btn.btn-outline-primary {
+                margin-left: 0 !important;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero h1 {
+                font-size: 1.55rem;
+            }
+
+            .stat-grid {
+                grid-template-columns: repeat(auto-fit, minmax(108px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Primary navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#about">Junaid Baber</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Formation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section id="about" class="hero">
+            <div class="container">
+                <div class="hero-card">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center mb-3 mb-md-0">
+                            <img src="assets/junaidDB.jpg" alt="Portrait of Junaid Baber" class="profile-img">
+                        </div>
+                        <div class="col-md-9">
+                            <h1>Ingénieur Machine Learning & Data Scientist</h1>
+                            <p class="lead">Je conçois et déploie des systèmes d'IA de niveau production en vision par ordinateur, TAL et robotique, avec un focus sur l'impact mesurable en recherche et en entreprise.</p>
+                            <div class="mt-3">
+                                <a href="#projects" class="btn btn-primary mr-2">Voir les projets</a>
+                                <a href="#contact" class="btn btn-outline-primary">Me contacter</a>
+                            </div>
+                            <div class="stat-grid" aria-label="Quick profile highlights">
+                                <div class="stat-card"><strong>De bout en bout</strong><span>Cycle de vie ML</span></div>
+                                <div class="stat-card"><strong>Multi-domaines</strong><span>Vision, TAL, Robotique</span></div>
+                                <div class="stat-card"><strong>Ph.D.</strong><span>Multimedia & Retrieval</span></div>
+                                <div class="stat-card"><strong>International</strong><span>France, Thaïlande, Japon</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 content-max">
+                        <p>Ingénieur machine learning et data scientist expérimenté, je dispose d'un solide historique de livraison de solutions IA/ML de bout en bout dans des contextes variés.</p>
+                        <p>Mes travaux couvrent le deep learning, la vision par ordinateur, le traitement du langage naturel et la robotique, en transformant des besoins complexes en systèmes intelligents fiables.</p>
+                        <p>J'applique des pratiques d'ingénierie logicielle robustes sur tout le cycle de vie ML : collecte de données, développement des modèles, déploiement, monitoring et amélioration continue.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title">Expérience Professionnelle</h2>
+                <p class="section-subtitle">Parcours ciblé de postes où j'ai développé des systèmes IA pour la recherche, les déploiements publics et les applications temps réel.</p>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <h5>Research Engineer — LIG, UGA, France</h5>
+                        <p class="timeline-date">Dec 2024 – Present</p>
+                        <ul>
+                            <li>Developing LLM and SLM-based models for software engineering applications.</li>
+                            <li>Researching and implementing advanced language models for code generation and analysis.</li>
+                            <li>Designing AI workflows to improve software development processes.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <h5>Machine Learning Engineer — GIPSA-LAB, France</h5>
+                        <p class="timeline-date">Dec 2023 – Nov 2024</p>
+                        <ul>
+                            <li>Built advanced ML pipelines for signal processing and biomedical applications.</li>
+                            <li>Implemented deep learning methods for Raman spectroscopic analysis.</li>
+                            <li>Collaborated with interdisciplinary teams on real-time data systems.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <h5>AI/ML Engineer — LIG, UGA, France</h5>
+                        <p class="timeline-date">Dec 2021 – Nov 2023</p>
+                        <ul>
+                            <li>Built production-grade human-robot collaboration systems with ROS and 3D sensors.</li>
+                            <li>Developed efficient 3D LiDAR object detection framework for real-time use.</li>
+                            <li>Created custom datasets and optimized model inference pipelines.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <h5>ICT Expert & Solutions Architect — UNDP Balochistan & GIL</h5>
+                        <p class="timeline-date">Mar 2017 – Dec 2021</p>
+                        <ul>
+                            <li>Designed and deployed cloud-based face recognition system for smart surveillance.</li>
+                            <li>Led multilingual sentiment analysis platforms for English, Urdu, and Roman Urdu.</li>
+                            <li>Delivered scalable web systems using Flask, Django, and REST APIs.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <h5>Visiting Researcher — National Institute of Informatics, Tokyo, Japan</h5>
+                        <p class="timeline-date">Jun 2010 – Dec 2011</p>
+                        <ul>
+                            <li>Developed multimedia retrieval and video analysis algorithms.</li>
+                            <li>Implemented computer vision solutions for content-based image retrieval.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="alt-bg">
+            <div class="container">
+                <h2 class="section-title">Projets sélectionnés et réalisations techniques</h2>
+                <p class="section-subtitle">Chaque projet met en évidence un problème concret, une approche technique et un impact mesurable.</p>
+
+                <div class="project-card">
+                    <button type="button" class="project-title" data-target="project1" aria-expanded="false" aria-controls="project1" id="project1-label">
+                        Human-Robot Collaboration System with Motion Prediction
+                        <span class="chevron">›</span>
+                    </button>
+                    <div id="project1" class="project-details" role="region" aria-labelledby="project1-label">
+                        <p><strong>Technologies:</strong></p>
+                        <div>
+                            <span class="tag">Python</span><span class="tag">ROS</span><span class="tag">PyTorch</span><span class="tag">ANNOY</span><span class="tag">3D Sensors</span><span class="tag">Real-time Processing</span>
+                        </div>
+                        <p class="mt-2"><strong>Description:</strong> Developed an end-to-end framework for predicting human hand motion in shared workspaces to prevent robot-human collisions. Built a custom dataset from collision scenarios, implemented 3D cell quantization and embedding models, and enabled sub-100ms predictions via efficient nearest-neighbor search.</p>
+                        <p><strong>Impact:</strong> Improved safety and throughput in collaborative robotics workflows.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <button type="button" class="project-title" data-target="project2" aria-expanded="false" aria-controls="project2" id="project2-label">
+                        Real-Time 3D Object Detection in LiDAR Point Clouds
+                        <span class="chevron">›</span>
+                    </button>
+                    <div id="project2" class="project-details" role="region" aria-labelledby="project2-label">
+                        <p><strong>Technologies:</strong></p>
+                        <div>
+                            <span class="tag">Python</span><span class="tag">PCL</span><span class="tag">OpenCV</span><span class="tag">Scikit-learn</span><span class="tag">KITTI</span><span class="tag">ROS/RVIZ</span>
+                        </div>
+                        <p class="mt-2"><strong>Description:</strong> Designed 3D-PSH, a lightweight object detection approach optimized for resource-constrained platforms. Combined adaptive clustering, spatial histogram features, and BoVW + SVM classification for fast and accurate inference.</p>
+                        <p><strong>Impact:</strong> Achieved competitive detection quality with 3–5x faster inference than deep learning alternatives.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <button type="button" class="project-title" data-target="project6" aria-expanded="false" aria-controls="project6" id="project6-label">
+                        Enterprise Smart Surveillance Platform
+                        <span class="chevron">›</span>
+                    </button>
+                    <div id="project6" class="project-details" role="region" aria-labelledby="project6-label">
+                        <p><strong>Technologies:</strong></p>
+                        <div>
+                            <span class="tag">Python</span><span class="tag">Flask/Django</span><span class="tag">OpenCV</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span class="tag">IP Cameras</span>
+                        </div>
+                        <p class="mt-2"><strong>Description:</strong> Architected a production-grade surveillance system integrating multiple IP camera streams with face detection, recognition, tracking, and real-time monitoring dashboards.</p>
+                        <p><strong>Impact:</strong> Reduced manual check-in time by 80% and improved unauthorized-access response with real-time alerts.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <button type="button" class="project-title" data-target="project3" aria-expanded="false" aria-controls="project3" id="project3-label">
+                        Biomedical Classification with Deep Learning on Raman Spectroscopy
+                        <span class="chevron">›</span>
+                    </button>
+                    <div id="project3" class="project-details" role="region" aria-labelledby="project3-label">
+                        <p><strong>Technologies:</strong></p>
+                        <div>
+                            <span class="tag">Python</span><span class="tag">TensorFlow/Keras</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span>
+                        </div>
+                        <p class="mt-2"><strong>Description:</strong> Built deep learning models for biomedical sample classification from noisy Raman spectral data, including preprocessing, augmentation, architecture design, and hyperparameter optimization.</p>
+                        <p><strong>Impact:</strong> Delivered 95%+ classification accuracy and reduced analysis time from hours to seconds.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <button type="button" class="project-title" data-target="project5" aria-expanded="false" aria-controls="project5" id="project5-label">
+                        Multilingual Sentiment Analysis Platform for Social Media
+                        <span class="chevron">›</span>
+                    </button>
+                    <div id="project5" class="project-details" role="region" aria-labelledby="project5-label">
+                        <p><strong>Technologies:</strong></p>
+                        <div>
+                            <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">LSTM</span><span class="tag">Flask</span><span class="tag">PostgreSQL</span>
+                        </div>
+                        <p class="mt-2"><strong>Description:</strong> Built an end-to-end multilingual sentiment system (English, Urdu, Roman Urdu), including benchmark dataset creation, custom tokenization, attention-based BiLSTM, and BERT fine-tuning.</p>
+                        <p><strong>Impact:</strong> Supported real-time analysis of 100K+ tweets/day and achieved F1-score of 0.89 on Roman Urdu data.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <button type="button" class="project-title" data-target="project4" aria-expanded="false" aria-controls="project4" id="project4-label">
+                        LLM-Based Rhetorical Strategy Classification for Crowdfunding
+                        <span class="chevron">›</span>
+                    </button>
+                    <div id="project4" class="project-details" role="region" aria-labelledby="project4-label">
+                        <p><strong>Technologies:</strong></p>
+                        <div>
+                            <span class="tag">Python</span><span class="tag">OpenAI API</span><span class="tag">Transformers</span><span class="tag">GPT</span><span class="tag">Prompt Engineering</span>
+                        </div>
+                        <p class="mt-2"><strong>Description:</strong> Developed an automated classifier for persuasive rhetoric in crowdfunding campaigns using zero-shot and few-shot prompt strategies across multiple LLMs.</p>
+                        <p><strong>Impact:</strong> Identified rhetorical features correlated with 40% higher campaign funding success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Compétences Techniques</h2>
+                <p class="section-subtitle">Outils et compétences clés utilisés pour concevoir, déployer et industrialiser des systèmes IA en production et en recherche.</p>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h5>Programming Languages</h5>
+                        <p>Python (Expert), C++ (Proficient), MATLAB, SQL, JavaScript, LaTeX</p>
+                    </div>
+                    <div class="skill-category">
+                        <h5>Machine Learning & Deep Learning</h5>
+                        <p>TensorFlow, PyTorch, Keras, Scikit-learn, XGBoost, LightGBM, CNNs, RNNs, Transformers, GANs, AutoEncoders</p>
+                    </div>
+                    <div class="skill-category">
+                        <h5>Computer Vision & NLP</h5>
+                        <p>OpenCV, image/video analysis, face recognition, BERT/GPT, Word2Vec, LSTM, sentiment analysis, NER</p>
+                    </div>
+                    <div class="skill-category">
+                        <h5>Robotics & 3D Processing</h5>
+                        <p>ROS, RVIZ, PCL, LiDAR processing, 3D object detection</p>
+                    </div>
+                    <div class="skill-category">
+                        <h5>Data Engineering & Deployment</h5>
+                        <p>MySQL, PostgreSQL, SQLAlchemy, Pandas, NumPy, Flask, Django, REST APIs, Docker, CI/CD</p>
+                    </div>
+                    <div class="skill-category">
+                        <h5>Tools & Platforms</h5>
+                        <p>Git, Jupyter, Linux/Unix, AWS/Cloud, distributed computing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="alt-bg">
+            <div class="container">
+                <h2 class="section-title">Formation</h2>
+                <ul>
+                    <li><strong>Ph.D. in Multimedia Processing and Retrieval</strong>, AIT, Thailand (2011–2013)</li>
+                    <li><strong>M.Sc. in Computer Science</strong>, AIT, Thailand (2008–2010)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="publications">
+            <div class="container">
+                <h2 class="section-title">Publications</h2>
+                <p class="section-subtitle">Des publications sélectionnées sont accessibles via Google Scholar.</p>
+                <ul>
+                    <li>Research contributions in multimedia retrieval, machine learning, robotics perception, and NLP.</li>
+                    <li>See the latest complete list on the Google Scholar profile linked below.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">Ouvert aux collaborations en IA appliquée, ingénierie machine learning et développement de systèmes intelligents.</p>
+                <div class="contact-card content-max">
+                    <p><strong>Email:</strong> <a href="mailto:junaidbaber.cs@gmail.com">junaidbaber.cs@gmail.com</a></p>
+                    <p><strong>Google Scholar:</strong> <a href="https://scholar.google.co.th/citations?hl=en&user=rggPjyoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">View publications</a></p>
+                    <p><strong>Availability:</strong> Research collaboration, consulting, and applied AI engineering roles.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">© <span id="currentYear"></span> Junaid Baber. Conçu avec un focus sur la clarté, l'accessibilité et l'impact.</div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.project-title').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var targetId = button.getAttribute('data-target');
+                var detail = document.getElementById(targetId);
+                var isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                document.querySelectorAll('.project-title').forEach(function(otherButton) {
+                    if (otherButton !== button) {
+                        otherButton.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                document.querySelectorAll('.project-details').forEach(function(otherDetail) {
+                    if (otherDetail !== detail) {
+                        otherDetail.classList.remove('active');
+                    }
+                });
+
+                button.setAttribute('aria-expanded', String(!isExpanded));
+                detail.classList.toggle('active');
+            });
+        });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
